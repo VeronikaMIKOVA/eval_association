@@ -7,24 +7,26 @@
     </head>
 
     <body>
-        <header>
-            <h1>Arts martiaux mixtes - MMA</h1>
-            <img src="../img/logo_SFA.png" alt="logo de l'association spartiate fight academy 34">
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Accueil</a></li> <!-- Accueil (présentation de l’association, image, slogan)-->
-                    <li><a href="activites.html">Activités</a></li> <!-- Activités (liste d’activités avec une mise en page en cartes)-->
-                    <li><a href="actualites.html">Actualités</a></li> <!--Actualités (articles avec date, titre, résumé)-->
-                    <li><a href="contact.html">Contact</a></li> <!--Contact (formulaire HTML – pas besoin de backend, juste une mise en forme correcte)-->
-                </ul>
-            </nav>
+        <header class="en-tete">
+            <img src="../img/logo_SFA.png" alt="logo de l'association spartiate fight academy 34" class="logo">
+            <div class="header-container">
+                <h1>Spartiate Fight Academy 34</h1>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li> <!-- Accueil (présentation de l’association, image, slogan)-->
+                        <li><a href="activites.html">Activités</a></li> <!-- Activités (liste d’activités avec une mise en page en cartes)-->
+                        <li><a href="actualites.html">Actualités</a></li> <!--Actualités (articles avec date, titre, résumé)-->
+                        <li><a href="contact.html">Contact</a></li> <!--Contact (formulaire HTML – pas besoin de backend, juste une mise en forme correcte)-->
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <main>
             <form method="post" action="contact" name="contact">
                 <div>
                     <fieldset> 
-                        <fieldset> <!-- Genre -->
+                        <fieldset class="genre"> <!-- Genre -->
                             <input class="mr-2" id="genre_homme" type="radio" name="genre" value="monsieur" required>
                             <label class="px-2" for="genre_homme">Homme</label>
                             
@@ -34,28 +36,32 @@
 
                         <div class="informations"> <!-- Informations personnelles -->
                             <fieldset > <!-- Nom de famille => OBLIGATOIRE -->
-                                <input type="text" id="nom" name="nom" autocomplete="off" placeholder="" required>
                                 <label for="nom">Votre nom : </label>
+                                <input type="text" id="nom" name="nom" autocomplete="off" placeholder="" required>
+                                
                             </fieldset>
 
                             <fieldset> <!-- Prénom => OBLIGATOIRE  -->
+                                <label for="prenom">Votre prénom :</label>
                                 <input type="text" id="prenom" name="prenom" autocomplete="off" placeholder="" required>
-                                <label for="prenom">Votre prénom :</label>           
+                                           
                             </fieldset>
 
                             <fieldset> <!-- Adresse e-mail => OBLIGATOIRE  -->
-                                <input type="email" id="email" name="email" autocomplete="off" placeholder="" required>
                                 <label for="email">Votre adresse mail :</label>
+                                <input type="email" id="email" name="email" autocomplete="off" placeholder="" required>
+                                
                             </fieldset>
 
                             <fieldset> <!-- numéro de télephone => OBLIGATOIRE  -->
-                                <input type="text" id="telephone" name="telephone" autocomplete="off" placeholder="" minlength="3" maxlength="64" pattern="[0-9]{10}" required>
                                 <label for="telephone">Votre numéro de téléphone :</label>
+                                <input type="text" id="telephone" name="telephone" autocomplete="off" placeholder="" minlength="3" maxlength="64" pattern="[0-9]{10}" required>
+                                
                             </fieldset>
                         </div>
                     </fieldset> 
                 </div>
-
+ 
                 <div class="droite">
                     <fieldset> <!-- Message à saisir -->
                         <legend>Saisissez votre message :</legend>
@@ -63,7 +69,7 @@
                     </fieldset>
                 
                     <section class="submit">
-                            <input type="submit">
+                            <input type="submit" value="Envoyer">
                     </section>
                 </div>
             </form>
