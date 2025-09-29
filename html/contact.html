@@ -6,4 +6,68 @@
         <link rel="stylesheet" href="../css/contact.css">
     </head>
 
+    <body>
+        <header>
+            <h1>Arts martiaux mixtes - MMA</h1>
+            <img src="../img/logo_SFA.png" alt="logo de l'association spartiate fight academy 34">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li> <!-- Accueil (présentation de l’association, image, slogan)-->
+                    <li><a href="activites.html">Activités</a></li> <!-- Activités (liste d’activités avec une mise en page en cartes)-->
+                    <li><a href="actualites.html">Actualités</a></li> <!--Actualités (articles avec date, titre, résumé)-->
+                    <li><a href="contact.html">Contact</a></li> <!--Contact (formulaire HTML – pas besoin de backend, juste une mise en forme correcte)-->
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <form method="post" action="contact" name="contact">
+                <div>
+                    <fieldset> 
+                        <fieldset> <!-- Genre -->
+                            <input class="mr-2" id="genre_homme" type="radio" name="genre" value="monsieur" required>
+                            <label class="px-2" for="genre_homme">Homme</label>
+                            
+                            <input class="mr-2" id="genre_femme" type="radio" name="genre" value="madame" required>
+                            <label class="px-4" for="genre_femme">Femme</label> 
+                        </fieldset>
+
+                        <div class="informations"> <!-- Informations personnelles -->
+                            <fieldset > <!-- Nom de famille => OBLIGATOIRE -->
+                                <input type="text" id="nom" name="nom" autocomplete="off" placeholder="" required>
+                                <label for="nom">Votre nom : </label>
+                            </fieldset>
+
+                            <fieldset> <!-- Prénom => OBLIGATOIRE  -->
+                                <input type="text" id="prenom" name="prenom" autocomplete="off" placeholder="" required>
+                                <label for="prenom">Votre prénom :</label>           
+                            </fieldset>
+
+                            <fieldset> <!-- Adresse e-mail => OBLIGATOIRE  -->
+                                <input type="email" id="email" name="email" autocomplete="off" placeholder="" required>
+                                <label for="email">Votre adresse mail :</label>
+                            </fieldset>
+
+                            <fieldset> <!-- numéro de télephone => OBLIGATOIRE  -->
+                                <input type="text" id="telephone" name="telephone" autocomplete="off" placeholder="" minlength="3" maxlength="64" pattern="[0-9]{10}" required>
+                                <label for="telephone">Votre numéro de téléphone :</label>
+                            </fieldset>
+                        </div>
+                    </fieldset> 
+                </div>
+
+                <div class="droite">
+                    <fieldset> <!-- Message à saisir -->
+                        <legend>Saisissez votre message :</legend>
+                        <textarea id="msg" name="message" cols="42" rows="15"></textarea>
+                    </fieldset>
+                
+                    <section class="submit">
+                            <input type="submit">
+                    </section>
+                </div>
+            </form>
+        </main>
+
+    </body>
 </html>
